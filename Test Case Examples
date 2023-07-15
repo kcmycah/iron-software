@@ -1,0 +1,39 @@
+Test Cases
+To ensure the correctness of the OldPhonePad method, we can create test cases that cover different scenarios and expected outputs. Here are a few examples:
+
+Test Case 1: Basic Input
+csharp
+Copy code
+string input = "33#";
+string expectedOutput = "E";
+string output = Phone.OldPhonePad(input);
+
+// Assert
+Assert.AreEqual(expectedOutput, output);
+Test Case 2: Backspace
+csharp
+Copy code
+string input = "227*#";
+string expectedOutput = "B";
+string output = Phone.OldPhonePad(input);
+
+// Assert
+Assert.AreEqual(expectedOutput, output);
+Test Case 3: Multiple Keypad Presses
+csharp
+Copy code
+string input = "4433555 555666#";
+string expectedOutput = "HELLO";
+string output = Phone.OldPhonePad(input);
+
+// Assert
+Assert.AreEqual(expectedOutput, output);
+Test Case 4: Invalid Characters
+csharp
+Copy code
+string input = "8 88777444666*664#";
+string expectedOutput = "?????";
+string output = Phone.OldPhonePad(input);
+
+// Assert
+Assert.AreEqual(expectedOutput, output);
